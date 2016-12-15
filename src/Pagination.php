@@ -1,6 +1,6 @@
 <?php
 namespace PaginationAllegri;
-
+use \PDO;
 /*
  * Pagination Class - Pagination Allegri
  * by Hilman Ramadhan >> @hilmanrdn 14-12-2016
@@ -15,7 +15,7 @@ class Pagination
      */
     public function __construct($host, $dbname, $user, $pass, $table)
     {
-        $this->db = new \PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
+        $this->db = new PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
         $this->table = $table;
         $this->set_total_records();
     }
