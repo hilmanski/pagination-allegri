@@ -6,6 +6,12 @@ php pagination package, work with search query
 composer require "hilmanrdn/pagination-allegri":"dev-master"
 ```
 
+#URL Example
+index.php?page=1 //normal<br>
+index.php?page=1&search=john&col=username //with search <br>
+Search value :will be what we're searching for <br>
+Col value :will be which column (on our database)
+
 #How to use it
 ```
 use PaginationAllegri\Pagination;
