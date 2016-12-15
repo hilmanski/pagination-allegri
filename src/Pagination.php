@@ -11,11 +11,11 @@ class Pagination
 
     /*
      * Construct: set table, connection and total records
-     * @param $table name
+     * @param host, databasename, user, pass, table
      */
-    public function __construct($table)
+    public function __construct($host, $dbname, $user, $pass, $table)
     {
-        $this->db = new PDO("mysql:host=localhost;dbname=faker", "root", "root");
+        $this->db = new \PDO("mysql:host=$host;dbname=$dbname", "$user", "$pass");
         $this->table = $table;
         $this->set_total_records();
     }
